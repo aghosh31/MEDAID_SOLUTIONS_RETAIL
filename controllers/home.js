@@ -7,15 +7,15 @@ router.get('/', (req, res)=>{
 
 	userModel.getAll(function(results){
 		if(results.length > 0){
-			
+
 			var allData = {
 				name: req.session.name,
 				result: results
 			};
 			res.render('home/meds', allData);
 		}
-	});	
-});	
+	});
+});
 
 
 router.get('/ordermed/:id', (req, res)=>{
@@ -30,7 +30,7 @@ router.get('/ordermed/:id', (req, res)=>{
 		}else{
 			res.redirect('/');
 		}
-	});	
+	});
 });
 
 
@@ -52,17 +52,17 @@ router.post('/ordermed/:id', (req, res)=>{
 			user.price = result[0].price;
 
 			user.totalprice = user.price * parseInt(user.quantity);
-			
-  
+
+
 			userModel.insertOrder(user, function(results) {
 				res.redirect('/');
 			});
 		  }
-});	
+});
 });
 
 
-	
+
 
 
 module.exports = router;

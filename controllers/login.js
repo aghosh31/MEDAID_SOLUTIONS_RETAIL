@@ -29,8 +29,9 @@ router.get('/', (req, res)=>{
 				req.session.name = req.body.uname;
 				req.session.type = result[0].type;
 				req.session.uid = result[0].id;
+				console.log("PUCHU")
 				if(result[0].type == "ADMIN") {res.redirect('/admindashboard');}
-				if(result[0].type == "CUSTOMER") {res.redirect('/userdashboard');}
+				if(result[0].type == "CUSTOMER") {res.redirect('/');}
 			}else{
 				res.redirect('/login');
 			}
