@@ -6,9 +6,6 @@ var router = express.Router();
 
 router.get('/', (req, res)=>{
 
-	if(req.session.type=='CUSTOMER'){
-		res.redirect('/userdashboard');
-	}
 	if(req.session.type=='ADMIN'){
 		res.redirect('/admindashboard');
 	}
@@ -29,7 +26,6 @@ router.get('/', (req, res)=>{
 				req.session.name = req.body.uname;
 				req.session.type = result[0].type;
 				req.session.uid = result[0].id;
-				console.log("PUCHU")
 				if(result[0].type == "ADMIN") {res.redirect('/admindashboard');}
 				if(result[0].type == "CUSTOMER") {res.redirect('/');}
 			}else{
