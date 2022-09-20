@@ -1,57 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Subscriber Registration</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+		<title>Health - Medical Website Template</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="Tooplate">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 
-	<link rel="stylesheet" href="assets/Admin/dist/css/public.css" />
-
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="assets/css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="assets/css/flexslider.css">
-
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-	
-	<!-- Date Picker -->
-	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/popupS.css">
-
-	<!-- Modernizr JS -->
-	<script src="assets/js/modernizr-2.6.2.min.js"></script>
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="assets/css/tooplate-style.css">
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/respond.min.js"></script>
@@ -67,26 +32,6 @@
 	<div id="page">
 
 <% include partials/universal-nav %>
-
-		<aside id="colorlib-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(assets/images/cover-img-18.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
-				   				<div class="slider-text-inner text-center">
-				   					<h1>Register</h1>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-
 		<div class="colorlib-wrap">
 			<div class="container">
 				<div class="row">
@@ -97,7 +42,7 @@
 									<div class="col-md-12 col-md-offset-0 heading2 animate-box">
 										<h2>Registration</h2>
 									</div>
-									<div class="row">	
+									<div class="row">
 										<div class="col-md-12 animate-box">
 											<div class="room-wrap">
 												<div class="row">
@@ -121,21 +66,25 @@
 									                <div class="form-group">
 									                  <label>Email</label>
 									                  <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" value="">
-																	</div>																	
+																	</div>
 																	<div class="form-group">
 									                  <label>Enter your New Password</label>
 									                  <input type="password" class="form-control" id="sub-input" placeholder="Enter Your New password" name="password" value="">
 																	</div>
+																	<div class="form-group">
+									                  <label>Confirm your New Password</label>
+									                  <input type="password" class="form-control" id="sub-input" placeholder="Confirm Your New password" name="password" value="">
+																	</div>
                                                     <div class="alert alert-primary email-unavailable" role="alert"></div>
-																						
+
                   									<div class="error">
-										            </div>		
+										            </div>
                   									<button type="submit" class="btn btn-primary">SUBMIT</button>
                   								   </form>
 												</div>
 											</div>
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -146,11 +95,6 @@
 			</div>
 		</div>
 	</div>
-
-	
-
-<% include partials/footer %>
-
 	</div>
 
 	<div class="gototop js-top">
@@ -179,14 +123,14 @@
 
 	<!-- Main -->
 	<script src="assets/js/main.js"></script>
-	
-	
+
+
 	<script type="text/javascript">
     $(".username-unavailable").css("display", "none");
     $(document).ready(function() {
     $('#username').keyup(function() {
     var value = $(this).val();
-    
+
     $.ajax({
       type: 'post',
       url: 'user_available_check.php',
@@ -199,13 +143,13 @@
       });
       });
     </script>
-	
+
     <script type="text/javascript">
     $(".email-unavailable").css("display", "none");
     $(document).ready(function() {
     $('#email').keyup(function() {
     var value = $(this).val();
-    
+
     $.ajax({
       type: 'post',
       url: 'email_available_check.php',
@@ -234,4 +178,3 @@
 
 	</body>
 </html>
-
