@@ -248,83 +248,145 @@
 
 
      <!-- NEWS -->
-     <section id="news" data-stellar-background-ratio="2.5">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-md-12 col-sm-12">
-                         <!-- SECTION TITLE -->
-                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>Latest News</h2>
-                         </div>
-                    </div>
 
-                    <div class="col-md-4 col-sm-6">
-                         <!-- NEWS THUMB -->
-                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <a href="news-detail.html">
-                                   <img src="assets/images/news-image1.jpg" class="img-responsive" alt="">
-                              </a>
-                              <div class="news-info">
-                                   <span>March 08, 2018</span>
-                                   <h3><a href="news-detail.html">About Amazing Technology</a></h3>
-                                   <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
-                                   <div class="author">
-                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
-                                        <div class="author-info">
-                                             <h5>Jeremie Carlson</h5>
-                                             <p>CEO / Founder</p>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
+		<% if (name == null){ %>
+			<section id="news" data-stellar-background-ratio="2.5">
+					<div class="container">
+							<div class="row">
+							 <div class="col-md-12 col-sm-12">
+									<!-- SECTION TITLE -->
+									<div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+											 <h2>Latest News</h2>
+									</div>
+						  </div>
+							<p style="font-size:22px">We Welcome you to Our Medaid family.Register with us to get the Latest Offers & News</p>
+							<br>
+							<p style="font-size:22px">If you are a part of our Medaid Family Please Sign In</p>
+							<button style="
+							outline: none;
+							cursor: pointer;
+							font-size: 17px;
+							line-height: 1;
+							border-radius: 500px;
+							transition-property: background-color,border-color,color,box-shadow,filter;
+							transition-duration: .3s;
+							border: 1px solid transparent;
+							letter-spacing: 0px;
+							min-width: 20px;
+							white-space: normal;
+							font-weight: 1000;
+							text-align: center;
+							padding: 16px 14px 18px;
+							color: #ffffff;
+							background-color: #a5c422;
+							height: 48px;
+							:hover{
+									background-color: #1db954;
+							}" onclick="location.href='/register'">Register</button>
+							<button style="
+							outline: none;
+							cursor: pointer;
+							font-size: 17px;
+							line-height: 1;
+							border-radius: 500px;
+							transition-property: background-color,border-color,color,box-shadow,filter;
+							transition-duration: .3s;
+							border: 1px solid transparent;
+							letter-spacing: 0px;
+							min-width: 20px;
+							white-space: normal;
+							font-weight: 1000;
+							text-align: center;
+							padding: 16px 14px 18px;
+							color: #ffffff;
+							background-color: #a5c422;
+							height: 48px;
+							:hover{
+									background-color: #1db954;
+							}" onclick="location.href='/login'"">Login</button>
+					</div>
+				</div>
+			</section>
+		<% } else{ %>
+			<section id="news" data-stellar-background-ratio="2.5">
+					<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12">
+										 <!-- SECTION TITLE -->
+										 <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+													<h2>Latest News</h2>
+										 </div>
+											<div class="col-md-4 col-sm-6">
+	                         <!-- NEWS THUMB -->
+	                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+	                              <a href="news-detail.html">
+	                                   <img src="assets/images/news-image1.jpg" class="img-responsive" alt="">
+	                              </a>
+	                              <div class="news-info">
+	                                   <span>March 08, 2018</span>
+	                                   <h3><a href="news-detail.html">About Amazing Technology</a></h3>
+	                                   <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+	                                   <div class="author">
+	                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+	                                        <div class="author-info">
+	                                             <h5>Jeremie Carlson</h5>
+	                                             <p>CEO / Founder</p>
+	                                        </div>
+	                                   </div>
+	                              </div>
+	                         </div>
+	                    </div>
 
-                    <div class="col-md-4 col-sm-6">
-                         <!-- NEWS THUMB -->
-                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <a href="news-detail.html">
-                                   <img src="assets/images/news-image2.jpg" class="img-responsive" alt="">
-                              </a>
-                              <div class="news-info">
-                                   <span>February 20, 2018</span>
-                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                                   <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
-                                   <div class="author">
-                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
-                                        <div class="author-info">
-                                             <h5>Jason Stewart</h5>
-                                             <p>General Director</p>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
+	                    <div class="col-md-4 col-sm-6">
+	                         <!-- NEWS THUMB -->
+	                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+	                              <a href="news-detail.html">
+	                                   <img src="assets/images/news-image2.jpg" class="img-responsive" alt="">
+	                              </a>
+	                              <div class="news-info">
+	                                   <span>February 20, 2018</span>
+	                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
+	                                   <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+	                                   <div class="author">
+	                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+	                                        <div class="author-info">
+	                                             <h5>Jason Stewart</h5>
+	                                             <p>General Director</p>
+	                                        </div>
+	                                   </div>
+	                              </div>
+	                         </div>
+	                    </div>
 
-                    <div class="col-md-4 col-sm-6">
-                         <!-- NEWS THUMB -->
-                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
-                              <a href="news-detail.html">
-                                   <img src="assets/images/news-image3.jpg" class="img-responsive" alt="">
-                              </a>
-                              <div class="news-info">
-                                   <span>January 27, 2018</span>
-                                   <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
-                                   <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
-                                   <div class="author">
-                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
-                                        <div class="author-info">
-                                             <h5>Andrio Abero</h5>
-                                             <p>Online Advertising</p>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
+	                    <div class="col-md-4 col-sm-6">
+	                         <!-- NEWS THUMB -->
+	                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+	                              <a href="news-detail.html">
+	                                   <img src="assets/images/news-image3.jpg" class="img-responsive" alt="">
+	                              </a>
+	                              <div class="news-info">
+	                                   <span>January 27, 2018</span>
+	                                   <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
+	                                   <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+	                                   <div class="author">
+	                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+	                                        <div class="author-info">
+	                                             <h5>Andrio Abero</h5>
+	                                             <p>Online Advertising</p>
+	                                        </div>
+	                                   </div>
+	                              </div>
+	                         </div>
+	                    </div>
+										</div>
+		           </div>
+		      </section>
+		<% } %>
 
-               </div>
-          </div>
-     </section>
+
+
+
 
 
      <!-- Home Delivery -->
