@@ -34,32 +34,23 @@ router.get('/ordermed/:id', (req, res)=>{
 });
 
 
-router.post('/ordermed/:id', (req, res)=>{
+router.post('/', (req, res)=>{
 
 	var user = {
-		product_id: req.params.id,
-		orderedBy: req.body.name,
+		name: req.body.name,
 		email: req.body.email,
-		quantity: parseInt(req.body.quantity),
+		date: req.body.date,
 		phone: req.body.phone,
-		totalprice: 0,
-		price: 0,
-		message: "Order placed successfully"
+		requestType: req.body.requestType,
+		message: req.body.message
 	};
 
-	userModel.get(req.params.id, function(result){
-		if(result.length >0 ){
-			user.price = result[0].price;
+	userModel.insertOrder(user, function(results) {
+			res.redirect('/');
+	});
 
-			user.totalprice = user.price * parseInt(user.quantity);
-
-
-			userModel.insertOrder(user, function(results) {
-				res.redirect('/');
-			});
-		  }
 });
-});
+
 
 
 

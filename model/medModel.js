@@ -16,7 +16,7 @@ module.exports={
 		});
 	},
 	getAllOrders: function(callback){
-		var sql = "Select * from order_products d, products e  where d.product_id=e.id";
+		var sql = "Select * from Enquiry";
 		db.getResult(sql, [], function(results){
 			callback(results);
 		});
@@ -35,12 +35,12 @@ module.exports={
 		});
 	},
 	insertOrder: function(user, callback){
-		var sql = "insert into order_products(product_id, quantity, total_cost, orderedBy, email, phone) values (?,?,?,?,?,?)";
-		db.execute(sql, [user.product_id, user.quantity, user.totalprice, user.orderedBy, user.email, user.phone], function(status){
+		var sql = "insert into Enquiry(name, email, date, phone, message,requestType) values (?,?,?,?,?,?)";
+		db.execute(sql, [user.name, user.email, user.date, user.phone, user.message, user.requestType], function(status){
 			callback(status);
 		});
 	},
-	
+
 	update: function(user, callback){
 		var sql = "update user set username=?,password=?, type=? where id=?";
 		db.execute(sql, [user.uname, user.password,user.type, user.id], function(status){
@@ -60,6 +60,3 @@ module.exports={
 		});
 	}
 }
-
-
-

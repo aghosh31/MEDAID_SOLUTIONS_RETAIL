@@ -42,30 +42,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="box-body table-responsive no-padding">
               <table class="table table-hover">
                 <tr>
-                  <th>OrderID</th>
-                  <th>Ordered By</th>
-                  <th>Customer Email</th>
-                  <th>Customer Phone</th>
-                  <th>Medicine Name</th>
-                  <th>Product Quantity</th>
-                  <th>Total Price</th>
-                  <th>Vendor</th>
+                  <th>Name</th>
+                  <th>Email</th>
                   <th>Date</th>
+                  <th>Customer Phone</th>
+                  <th>Request Type</th>
+                  <th>message</th>
+
                 </tr>
                           <% for(var i=0; i < List.length; i++){ %>
                           <tr>
-                          <td><%= List[i].id %></td>
-                          <td><%= List[i].orderedBy %></td>
-                          <td><%= List[i].email %></td>
-                          <td><%= List[i].phone %></td>
                           <td><%= List[i].name %></td>
-                          <td><%= List[i].quantity %></td>
-                          <td><%= List[i].total_cost %></td>   
-                          <td><%= List[i].vendor %></td>                       
-                          <td><%= List[i].orderDate %></td>
+                          <td><%= List[i].email %></td>
+                          <td><%= List[i].date %></td>
+                          <td><%= List[i].phone %></td>
+                          <td><%= List[i].requestType %></td>
+                          <td><%= List[i].message %></td>   
                          </tr>
                          <% } %>
-                    
+
               </table>
             </div>
             <!-- /.box-body -->
